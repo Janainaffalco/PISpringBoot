@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang=”pt-br” xmlns:th="http://thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+
+<!-- Outlined -->
+<link href="https://fonts.google.com/icons?selected=Material%20Icons%20Outlined%3Alogin%3A" rel="stylesheet">
+ 
+
+ 
+
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>| AppDev - UC 14 |</title>
+
+<!-- Bootstrap -->
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap para testes, apagar depois que configurar thymeleaf-->
+<link href="static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+	 <!-- Custom fonts for this template-->
+    <link href="/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="/css/sb-admin-2.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+<!--começo do topo -->
+	<header>
+
+		<nav class="navbar navbar-expand-lg navbar-dark " style="background-color: #6e099c;">
+			<div class="container-fluid">
+			 <a href="/"><img src="https://i.imgur.com/2WJWa7v.png"> </a>
+			  	
+				<button class="navbar-toggler" type="button"
+					data-bs-toggle="collapse" data-bs-target="#navbarNav"
+					aria-controls="navbarNav" aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav">
+						<li class="nav-link active">TELA DE CADASTRO DA AGÊNCIA</li>
+				
+						<li class="nav-item"><a class="nav-link active" href="/logout"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+							fill="currentColor" class="bi bi-box-arrow-right"
+							viewBox="0 0 16 16">
+  <path fill-rule="evenodd"
+								d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z" />
+  <path fill-rule="evenodd"
+								d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z" />
+</svg></a></li>
+
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+	</header>
+<!-- fim do topo -->
+
+ <div class="container">
+
+        <!-- Outer Row -->
+        <div class="row justify-content-center">
+
+            <div class="col-xl-10 col-lg-12 col-md-9">
+
+                <div class="card o-hidden border-0 shadow-lg my-5">
+                    <div class="card-body p-0">
+                        <!-- Nested Row within Card Body -->
+                        <div class="row">
+                            <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
+                            <div class="col-lg-6">
+                                <div class="p-5">
+                                    <div class="text-center">
+                                        <h1 class="h4 text-gray-900 mb-4">Seja muito Bem Vindo!</h1>
+                                    </div>
+                                    <form class="user" action="/index" method="POST">
+                                        <div class="form-group">
+                                            <input type="email" class="form-control form-control-user"
+                                                id="email" name="email" aria-describedby="emailHelp"
+                                                placeholder="Digite o seu email">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password" name="senha" class="form-control form-control-user"
+                                                id="senha" placeholder="Digite sua senha">
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="custom-control custom-checkbox small">
+                                                <input type="checkbox" class="custom-control-input" id="lembrar" name="lembrar">
+                                                <label class="custom-control-label" for="lembrar">Lembrar de mim</label>
+                                            </div>
+                                        </div>
+
+                                        <div th:if="${erro != null}" th:text="${erro}" class="alert alert-danger" role="alert"></div>
+
+                                        <button class="btn btn-primary btn-user btn-block">
+                                            Login
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+	</div>
+
+		<div class="footer-copyright fixed-bottom text-center py-3"  style="background-color: #6e099c;">
+			<span class="text-light align-middle">| AppDev - UC 14 | - ©
+				2022 Copyright: JFD Janaina Falco Desenvolvedora</span>
+		</div>
+
+		<!--JavaScript bootstrap-->
+		<script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+			crossorigin="anonymous">
+			
+		</script>
+		  <!-- Bootstrap core JavaScript-->
+    <script src="/vendor/jquery/jquery.min.js"></script>
+    <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="/js/sb-admin-2.min.js"></script>
+</body>
+
+</html>
