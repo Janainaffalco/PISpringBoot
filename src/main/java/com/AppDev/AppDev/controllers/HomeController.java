@@ -6,14 +6,15 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 
 
+
+
 @Controller
-public class HomeController {
-    @GetMapping("/") // esse direcionamento vai retornar a rota principal
-    public String index(Model model){
-
-        model.addAttribute("nome", "Janaina");
-
-        return "home/index";
+    public class HomeController {
+    
         
-    }
+        @GetMapping("/")
+        public String index(Model model, String nome) {
+        model.addAttribute("nome", nome);
+        return "home/index";
+        }
 }

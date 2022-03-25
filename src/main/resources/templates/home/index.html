@@ -50,22 +50,34 @@
                         <li class="nav-item"><a class="nav-link active" aria-current="page" href="/">Home</a></li>
                         <li class="nav-item">
                             <a class="nav-link" href="/pacotes">
-                                << Listar Pacotes>> </a>
+                                Listar Pacotes </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/cadastrarPacote">
-                                << Cadastrar Pacotes>> </a>
+                                Cadastrar Pacotes </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/empresas">
-                                << Listar Empresas>> </a>
+                                Listar Empresas</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/cadastrarEmpresa">
-                                << Cadastrar Empresa>> </a>
+                                Cadastrar Empresa</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/administradores">
+                                Listar Administradores </a>
                         </li>
                         <li class="nav-item"><a class="nav-link" href="/">Sair
 						</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="/login/"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+							fill="currentColor" class="bi bi-box-arrow-right"
+							viewBox="0 0 16 16">
+  <path fill-rule="evenodd"
+								d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z" />
+  <path fill-rule="evenodd"
+								d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z" />
+</svg></a></li>
                         </br>
                     </ul>
                 </div>
@@ -78,9 +90,10 @@
         <br> <br>
 
         <div class="col">
-            <H3><span th:text="${nome}"></span></H3>
             <div class="card-header">
-                <h3 align="text-center">Bem Vindo ao Módulo Responsável - Agência de Desenvovedores.</h3>
+                <H3><span th:text="${nome}"></span></H3> -
+                <h3 align="text-center">
+                    Bem Vindo ao Módulo Responsável - Agência de Desenvovedores.</h3>
             </div>
         </div>
         <div class="col">
